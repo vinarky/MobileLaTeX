@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MobileLaTeX - Editor & Compiler LaTeX Android</title>
+    <title>MobileLaTeX - Android LaTeX Editor & Compiler</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #24292e; /* Warna gelap khas GitHub */
-            --accent-color: #0366d6;  /* Warna biru link */
+            --primary-color: #24292e;
+            --accent-color: #0366d6;
             --bg-color: #ffffff;
             --text-color: #333333;
         }
@@ -38,12 +38,20 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
         h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
         .tagline { opacity: 0.9; font-size: 1.1rem; margin-top: 10px; }
 
         .btn-download {
             display: inline-block;
-            background-color: #2ea44f; /* Warna hijau tombol sukses */
+            background-color: #2ea44f;
             color: white;
             padding: 15px 35px;
             text-decoration: none;
@@ -57,6 +65,23 @@
         .btn-download:hover {
             background-color: #2c974b;
             transform: translateY(-2px);
+        }
+
+        .screenshots {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            margin-top: 40px;
+            scrollbar-width: thin;
+        }
+
+        .screenshot-item {
+            flex: 0 0 auto;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
 
         .features {
@@ -82,54 +107,68 @@
             font-size: 0.9rem;
             color: #666;
         }
-
-        .badge {
-            background: #e1e4e8;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>MobileLaTeX <span style="font-weight: normal;">v1.0.0-beta</span></h1>
-        <p class="tagline">Editor & Compiler LaTeX Offline untuk Akademisi</p>
+        <img src="logo.png" alt="MobileLaTeX Icon" class="app-icon">
         
-        <a href="#" class="btn-download">Unduh APK Terbaru</a>
+        <h1>MobileLaTeX <span style="font-weight: normal;">v1.0.0-beta</span></h1>
+        <p class="tagline">Offline LaTeX Editor & Compiler for Academics</p>
+        
+        <a href="LINK_DOWNLOAD_APK_KAMU" class="btn-download">Download Latest APK</a>
         
         <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
-            Kompatibel dengan Android 10 ke atas
+            Compatible with Android 10 and above
         </p>
     </header>
 
     <section>
-        <h2 style="text-align: center;">Fitur Utama</h2>
+        <h2 style="text-align: center;">Screenshots</h2>
+        <div class="screenshots">
+            <img src="screen1.jpg" alt="App Screenshot 1" class="screenshot-item">
+            <img src="screen2.jpg" alt="App Screenshot 2" class="screenshot-item">
+            <img src="screen3.jpg" alt="App Screenshot 3" class="screenshot-item">
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align: center; margin-top: 50px;">Key Features</h2>
         <div class="features">
             <div class="feature-card">
-                <h3>⚡ Kompilasi Cepat</h3>
-                <p>Proses rendering TeX ke PDF yang dioptimalkan untuk performa perangkat mobile.</p>
+                <h3>📝 LaTeX Editor</h3>
+                <p>Powerful editor featuring syntax highlighting and essential coding tools for smooth document preparation.</p>
             </div>
             <div class="feature-card">
-                <h3>💾 Akses File Lokal</h3>
-                <p>Mendukung Storage Access Framework untuk membuka file .tex langsung dari folder HP.</p>
+                <h3>⚙️ LaTeX Compiler</h3>
+                <p>Compile your .tex files directly on your device with our optimized local build engine.</p>
             </div>
             <div class="feature-card">
-                <h3>🌐 100% Offline</h3>
-                <p>Tidak memerlukan koneksi internet untuk menulis atau melakukan kompilasi dokumen.</p>
+                <h3>📄 PDF Viewer</h3>
+                <p>Instant PDF preview within the app to verify your equations and layout immediately.</p>
+            </div>
+            <div class="feature-card">
+                <h3>☁️ Cloud Storage</h3>
+                <p>Seamlessly save and auto-backup your research files to Dropbox for multi-device access.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📶 100% Offline</h3>
+                <p>Work anywhere. Once packages are downloaded, no internet connection is required for compiling.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🆓 100% Free</h3>
+                <p>No subscriptions, no hidden fees, and no annoying ads. Purely focused on academic productivity.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 MobileLaTeX Project. Dikembangkan oleh Laboratory Assistant FMIPA USK.</p>
-        <p>Lihat kode sumber di <a href="https://github.com/vinarky/MobileLaTeX" style="color: var(--accent-color);">GitHub</a></p>
+        <p>&copy; 2026 MobileLaTeX Project. Developed by Mathematics Laboratory Assistant, USK.</p>
+        <p>Source code available on <a href="https://github.com/vinarky/MobileLaTeX" style="color: var(--accent-color);">GitHub</a></p>
     </footer>
 </div>
 
 </body>
 </html>
-
